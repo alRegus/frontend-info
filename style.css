@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.space {
+    height: 57px;
+}
+
+.left ul{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); /* z-index стал работать с этим, без него не работал */
+    cursor: pointer;
+}
+
+.l-block {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.l-elem-one {
+    height: 20vh;
+    background-color: rgb(228, 93, 40);
+}
+
+.l-elem-two {
+    height: 20vh;
+    background-color: rgb(21, 131, 196);
+}
+
+.l-elem-three {
+    height: 20vh;
+    background-color: rgb(197, 197, 13); 
+}
+
+.l-elem-four {
+    height: 20vh;
+    background-color: rgb(70, 233, 255); 
+}
+
+.l-elem-five {
+    height: 20vh; 
+    background-color: rgb(196, 243, 26);
+}
+
+.right-elem-container {
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 60vw;
+    height: 100vh;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.name-logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-logo-container img {
+    width: 83px;
+}
+
+.right-elem-one {
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(228,93,40,1) 0%, rgba(255,255,255,0) 14%);
+    display: none;
+    height: 100%;
+    box-shadow: -17px 0px 14px rgba(0, 0, 0, 0.6)
+}
+
+.right-elem-two {
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(21,131,196,1) 0%, rgba(255,255,255,0) 14%);
+    display: none;
+    height: 100%; 
+    box-shadow: -17px 0px 14px rgba(0, 0, 0, 0.6)
+}
+
+.right-elem-three {
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(197,197,13,1) 0%, rgba(255,255,255,0) 14%);
+    display: none; 
+    height: 100%; 
+    box-shadow: -17px 0px 14px rgba(0, 0, 0, 0.6) 
+}
+
+.right-elem-four {
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(70,233,255,1) 0%, rgba(255,255,255,0) 14%);
+    display: none; 
+    height: 100%;  
+    box-shadow: -17px 0px 14px rgba(0, 0, 0, 0.6)
+}
+
+.right-elem-five {
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(196,243,26,1) 0%, rgba(255,255,255,0) 14%);
+    display: none;
+    height: 100%;
+    box-shadow: -17px 0px 14px rgba(0, 0, 0, 0.6)
+}
+
+.right-elem-five h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.right-elem-five > .right-elem-container div {
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.right-elem-five > .right-elem-container h5 {
+    font-size: 15px;
+}
+
+.right-elem-five > .right-elem-container input {
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid rgb(99, 96, 96);
+}
+
+.right-elem-five > .right-elem-container select {
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid rgb(99, 96, 96);
+}
+
+.right-elem-five > .right-elem-container button {
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(153, 38, 38);
+    color: #fff;
+}
+
+.right-elem-five > .right-elem-container button:active {
+    transform: scale(0.9);
+}
+
+.show {
+    display:block;
+}
+
+
+.z-index {
+    z-index: 2;
+}
+
+@media (max-width: 650px) {
+    body{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 5vh 95vh;
+    }
+
+    .left ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 5vh;
+    }
+
+    .l-elem-one, .l-elem-two, .l-elem-three, .l-elem-four, .l-elem-five {
+        height: 5vh;
+    }
+
+    .right-elem-one, .right-elem-two, .right-elem-three, .right-elem-four, .right-elem-five {
+        box-shadow: -3px -9px 13px rgba(0, 0, 0, 0.6);
+    }
+}
